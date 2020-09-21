@@ -110,9 +110,10 @@ describe('End to end', async () => {
 			'NAME', 'AGE', 'ALIVE',
 		]);
 
-		assert.deepEqual(output, [
+		assert.deepStrictEqual(output, [
 			{ NAME: 'John Smith', AGE: 50, ALIVE: false },
 			{ NAME: 'Jane, Doe', AGE: 25, ALIVE: true },
+			{ NAME: 'Jane, Wall', AGE: -25, ALIVE: true },
 		]);
 	});
 
